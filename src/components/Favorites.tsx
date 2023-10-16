@@ -15,6 +15,7 @@ export default function Favorites() {
             introducao={ item.introducao }
             data_publicacao={ item.data_publicacao }
             item={ item }
+            link={ item.link }
           />
         </li>
       ))}
