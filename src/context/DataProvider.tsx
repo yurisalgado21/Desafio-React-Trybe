@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import useApiIBGE from '../hooks/useApiIBGE';
+import { ItemsTypes } from '../types';
 import DataContext from './DataContext';
 
 type DataProviderProps = {
@@ -6,9 +8,23 @@ type DataProviderProps = {
 };
 function DataProvider({ children }: DataProviderProps) {
   const { result, getApiIBGE } = useApiIBGE();
+  const [favorites, setFavorites] = useState<ItemsTypes[]>([]);
+
+  const toggleFavorite = (item: ItemsTypes) => {
+    const isFavorite = favorites.includes(item);
+    if (isFavorite) {
+      const newFavorites = favorites.filter((favorite) => favorite.id !== item.id);
+      setFavorites(newFavorites);
+    } else {
+      setFavorites([...favorites, item]);
+    }
+  };
+
   const context = {
     result,
     getApiIBGE,
+    toggleFavorite,
+    favorites,
   };
   return (
     <DataContext.Provider value={ context }>
