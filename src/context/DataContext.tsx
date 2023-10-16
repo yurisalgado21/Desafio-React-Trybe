@@ -1,4 +1,10 @@
 import { createContext } from 'react';
+import { DataServicesIBGETypes } from '../types';
 
-const DataContext = createContext({});
+type DataContextProps = {
+  result: DataServicesIBGETypes | undefined;
+  getApiIBGE: (url: string) => Promise<void>;
+};
+
+const DataContext = createContext({} as DataContextProps);
 export default DataContext;
