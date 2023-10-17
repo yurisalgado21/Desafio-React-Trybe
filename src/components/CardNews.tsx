@@ -1,6 +1,8 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import DataContext from '../context/DataContext';
 import { ItemsTypes } from '../types';
+import imageHeartRed from '../assets/Group 268.svg';
+import imageHeartWhite from '../assets/Group 268(1).svg';
 
 type CardNewsProps = {
   titulo: string;
@@ -19,6 +21,7 @@ function CardNews({ titulo, introducao, data_publicacao, item,
   const image = JSON.parse(imagens);
   const partsLink = link.split('/');
   const resultLink = partsLink.slice(0, 3).join('/');
+  const [checked, setChecked] = useState(false);
 
   const redirectToSite = () => {
     window.open(link, '_blank');
@@ -39,6 +42,11 @@ function CardNews({ titulo, introducao, data_publicacao, item,
     return diffDays;
   };
 
+  const handleChecked = () => {
+    setChecked(!checked);
+    toggleFavorite(item);
+  };
+
   return (
     <div>
       {index === 0 && <img src={ `${resultLink}/${image.image_intro}` } alt="" />}
@@ -52,9 +60,16 @@ function CardNews({ titulo, introducao, data_publicacao, item,
         {' '}
         dias
       </p>
-      <button onClick={ () => toggleFavorite(item) }>
-        favoritar
-      </button>
+      <label>
+        {checked ? <img src={ imageHeartRed } alt="favorite" />
+          : <img src={ imageHeartWhite } alt="favorite" />}
+        <input
+          type="checkbox"
+          checked={ checked }
+          onChange={ handleChecked }
+          style={ { appearance: 'none' } }
+        />
+      </label>
       <button onClick={ redirectToSite }>leia a notícia aqui</button>
     </div>
   );
