@@ -8,10 +8,17 @@ type CardNewsProps = {
   data_publicacao: string;
   item: ItemsTypes
   link: string;
+  imagens: string,
+  index: number,
 };
 
-function CardNews({ titulo, introducao, data_publicacao, item, link }: CardNewsProps) {
+function CardNews({ titulo, introducao, data_publicacao, item,
+  link, imagens, index }: CardNewsProps) {
   const { toggleFavorite } = useContext(DataContext);
+  console.log(imagens);
+  const image = JSON.parse(imagens);
+  const partsLink = link.split('/');
+  const resultLink = partsLink.slice(0, 3).join('/');
 
   const redirectToSite = () => {
     window.open(link, '_blank');
@@ -34,6 +41,7 @@ function CardNews({ titulo, introducao, data_publicacao, item, link }: CardNewsP
 
   return (
     <div>
+      {index === 0 && <img src={ `${resultLink}/${image.image_intro}` } alt="" />}
       <h1>{titulo}</h1>
       <p>{introducao}</p>
       <span>{data_publicacao}</span>

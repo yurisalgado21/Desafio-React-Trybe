@@ -1,4 +1,4 @@
-root {
+#root {
   max-width: 100%;
   margin: 0 auto;
   padding: 0;
@@ -41,7 +41,7 @@ root {
   color: #888;
 }
 
-
+/* 
 * {
   margin: 0;
   box-sizing: border-box;
@@ -50,19 +50,19 @@ root {
 body {
   padding: 0;
   margin: 0;
-  overflow-x: hidden;
 }
 
 .dark-mode, .light-mode {
+  overflow-x: hidden;
   transition: background-color 0.5s ease;
 }
 
-body, .dark-mode {
+.dark-mode {
   background-color: #0e0e0e;
   color: white;
 }
 
-body, .light-mode {
+.light-mode {
   background-color: white;
   color: black;
-}
+} */

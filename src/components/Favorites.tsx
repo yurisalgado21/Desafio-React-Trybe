@@ -8,7 +8,7 @@ export default function Favorites() {
   return (
     <>
       <div>Favorites</div>
-      {favorites.map((item: ItemsTypes) => (
+      {favorites.map((item: ItemsTypes, index) => (
         <li key={ item.id }>
           <CardNews
             titulo={ item.titulo }
@@ -16,6 +16,8 @@ export default function Favorites() {
             data_publicacao={ item.data_publicacao }
             item={ item }
             link={ item.link }
+            imagens={ item.imagens }
+            index={ index }
           />
         </li>
       ))}
