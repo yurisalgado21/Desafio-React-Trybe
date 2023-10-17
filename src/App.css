@@ -1,7 +1,7 @@
-#root {
-  max-width: 1280px;
+root {
+  max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
 }
 
@@ -39,4 +39,30 @@
 
 .read-the-docs {
   color: #888;
+}
+
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.dark-mode, .light-mode {
+  transition: background-color 0.5s ease;
+}
+
+body, .dark-mode {
+  background-color: #0e0e0e;
+  color: white;
+}
+
+body, .light-mode {
+  background-color: white;
+  color: black;
 }

@@ -9,6 +9,11 @@ type DataProviderProps = {
 function DataProvider({ children }: DataProviderProps) {
   const { result, getApiIBGE } = useApiIBGE();
   const [favorites, setFavorites] = useState<ItemsTypes[]>([]);
+  const [theme, setTheme] = useState(true);
+
+  const changeTheme = () => {
+    setTheme(!theme);
+  };
 
   const toggleFavorite = (item: ItemsTypes) => {
     const isFavorite = favorites.includes(item);
@@ -25,6 +30,8 @@ function DataProvider({ children }: DataProviderProps) {
     getApiIBGE,
     toggleFavorite,
     favorites,
+    theme,
+    changeTheme,
   };
   return (
     <DataContext.Provider value={ context }>

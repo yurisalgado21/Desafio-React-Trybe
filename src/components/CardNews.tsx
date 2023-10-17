@@ -44,7 +44,9 @@ function CardNews({ titulo, introducao, data_publicacao, item, link }: CardNewsP
         {' '}
         dias
       </p>
-      <button onClick={ () => toggleFavorite(item) }>favoritar</button>
+      <button onClick={ () => toggleFavorite(item) }>
+        favoritar
+      </button>
       <button onClick={ redirectToSite }>leia a notícia aqui</button>
     </div>
   );

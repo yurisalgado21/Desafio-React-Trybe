@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import DataContext from '../context/DataContext';
 import { DataServicesIBGETypes, ItemsTypes } from '../types';
 import CardNews from './CardNews';
+import imageHeart from '../assets/Group 268.svg';
 
 export default function Home() {
   const url = 'https://servicodados.ibge.gov.br/api/v3/noticias/?qtd=100';
@@ -25,7 +26,10 @@ export default function Home() {
 
   return (
     <div>
-      <Link to="/favorites">Favorites</Link>
+      <Link to="/favorites">
+        <img src={ imageHeart } alt="imagefavorite" />
+        Favorites
+      </Link>
       {news?.items.map((item: ItemsTypes) => (
         <li key={ item.id }>
           <CardNews
