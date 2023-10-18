@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from 'react';
 import DataContext from '../context/DataContext';
 import { DataServicesIBGETypes, ItemsTypes } from '../types';
 import CardNews from './CardNews';
+import styles from '../styles/CardNews.module.css';
 
 export default function Home() {
   const url = 'https://servicodados.ibge.gov.br/api/v3/noticias/?qtd=100';
@@ -24,7 +25,7 @@ export default function Home() {
 
   return (
     <div>
-      <ul>
+      <ul className={ styles.cardLi }>
         {news?.items.map((item: ItemsTypes, index) => (
           <li key={ item.id }>
             <CardNews

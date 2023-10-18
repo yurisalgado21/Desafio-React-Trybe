@@ -9,7 +9,7 @@ type DataProviderProps = {
 function DataProvider({ children }: DataProviderProps) {
   const { result, getApiIBGE } = useApiIBGE();
   const [favorites, setFavorites] = useState<ItemsTypes[]>([]);
-  const [theme, setTheme] = useState(true);
+  const [theme, setTheme] = useState(false);
 
   const changeTheme = () => {
     setTheme(!theme);

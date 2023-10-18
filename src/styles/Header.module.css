@@ -3,7 +3,7 @@
     justify-content: space-evenly;
     align-items: center;
     background-color: #04cf34;
-    border: 2px solid rgb(17, 163, 12);
+    /* border: 2px solid rgb(17, 163, 12); */
     box-shadow: 2px 2px 5px 2px #038705 ;
     height: 165px;
 }
@@ -28,4 +28,5 @@
 .linkFavorites {
     text-decoration: none;
     color: #fff;
+    font-size: 25px;
 }
