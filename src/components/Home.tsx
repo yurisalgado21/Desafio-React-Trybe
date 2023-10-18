@@ -30,19 +30,21 @@ export default function Home() {
         <img src={ imageHeart } alt="imagefavorite" />
         Favorites
       </Link>
-      {news?.items.map((item: ItemsTypes, index) => (
-        <li key={ item.id }>
-          <CardNews
-            titulo={ item.titulo }
-            introducao={ item.introducao }
-            data_publicacao={ item.data_publicacao }
-            item={ item }
-            link={ item.link }
-            imagens={ item.imagens }
-            index={ index }
-          />
-        </li>
-      ))}
+      <ul>
+        {news?.items.map((item: ItemsTypes, index) => (
+          <li key={ item.id }>
+            <CardNews
+              titulo={ item.titulo }
+              introducao={ item.introducao }
+              data_publicacao={ item.data_publicacao }
+              item={ item }
+              link={ item.link }
+              imagens={ item.imagens }
+              index={ index }
+            />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
