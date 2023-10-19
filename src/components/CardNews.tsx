@@ -67,7 +67,7 @@ function CardNews({ titulo, introducao, data_publicacao, item,
       <p className={ styles.introcucao }>{introducao}</p>
       <span className={ styles.data_publicacao }>{data_publicacao}</span>
       <div className={ styles.inputAndButton }>
-        <label>
+        <label data-testid="checkbox-favorites">
           {checked ? <img src={ imageHeartRed } alt="favorite" />
             : <img src={ imageHeartWhite } alt="favorite" />}
           <input

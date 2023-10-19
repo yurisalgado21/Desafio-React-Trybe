@@ -8,7 +8,13 @@ export default function Favorites() {
   const { favorites } = useContext(DataContext);
   return (
     <div>
-      <div className={ styles.titleFavorites }>Favorites News</div>
+      <h1
+        className={ styles.titleFavorites }
+        data-testid="title-favorites"
+      >
+        Favorites News
+
+      </h1>
       <ul className={ styles.cardLi }>
         {favorites.map((item: ItemsTypes, index) => (
           <li key={ item.id }>

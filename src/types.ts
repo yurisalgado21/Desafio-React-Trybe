@@ -23,3 +23,14 @@ export type ItemsTypes = {
   destaque: boolean,
   link: string,
 };
+
+export type MockData = {
+  count: number;
+  page: number;
+  totalPages: number;
+  nextPage: number;
+  previousPage: number;
+  showingFrom: number;
+  showingTo: number;
+  items: ItemsTypes[];
+};
