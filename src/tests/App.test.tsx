@@ -1,6 +1,5 @@
 import { screen } from '@testing-library/react';
 import { vi } from 'vitest';
-import userEvent from '@testing-library/user-event';
 import App from '../App';
 import { renderWithRouter } from '../utils/renderWithRouter';
 import DataProvider from '../context/DataProvider';

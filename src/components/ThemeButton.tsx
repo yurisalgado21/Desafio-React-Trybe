@@ -1,4 +1,3 @@
-import React from 'react';
 import { WbSunnyOutlined, DarkModeOutlined } from '@mui/icons-material';
 
 type ThemeButtonProps = {

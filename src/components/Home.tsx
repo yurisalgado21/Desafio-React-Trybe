@@ -3,6 +3,7 @@ import DataContext from '../context/DataContext';
 import { DataServicesIBGETypes, ItemsTypes } from '../types';
 import CardNews from './CardNews';
 import styles from '../styles/CardNews.module.css';
+import Footer from './Footer';
 
 export default function Home() {
   const url = 'https://servicodados.ibge.gov.br/api/v3/noticias/?qtd=100';
@@ -40,6 +41,9 @@ export default function Home() {
           </li>
         ))}
       </ul>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
