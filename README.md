@@ -1,27 +1,20 @@
-# React + TypeScript + Vite
+# Meu Desafio React: TrybeNews
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+IBGE News App
+Este é um aplicativo React que utiliza a API de notícias do IBGE para fornecer aos usuários as notícias mais recentes. O aplicativo permite que os usuários acessem as notícias, marquem suas favoritas e utilizem filtros para uma melhor experiência de navegação.
 
-Currently, two official plugins are available:
+Funcionalidades
+Listagem de Notícias: Acesse as notícias mais recentes do IBGE em tempo real.
+Visualização Detalhada: Leia a notícia completa ao clicar no link fornecido.
+Indicação de Tempo: Saiba há quantos dias a notícia foi publicada.
+Favoritos: Marque as notícias que você mais gostou para acessá-las facilmente mais tarde.
+Dark Mode e Light Mode: A aplicação pode ser alternada entre o modo escuro e o modo claro para melhorar a experiência do usuário.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Ferramentas e Técnicas
+React: Utilizado como a biblioteca principal para o desenvolvimento da aplicação.
+Context API: Implementado para gerenciar o estado global e facilitar o compartilhamento de dados entre componentes.
+Hooks Personalizados: Criados para a chamada da API e para outras funcionalidades específicas.
+Testes: Desenvolvidos para verificar a funcionalidade das principais características, incluindo o mock da API, com uma cobertura mínima de 50%.
+Responsividade: Pude fazer em partes a responsividade para uma pequena experiência de usuário consistente em dispositivos de diferentes tamanhos.
+Deploy
+O aplicativo foi implantado e pode ser acessado em https://desafio-react-trybe-28fsil72a.vercel.app/
