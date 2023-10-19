@@ -1,5 +1,7 @@
 # Meu Desafio React: TrybeNews
 
+Obs: recomenda-se usar navegadores como Brave ou CHROME para melhor experiência
+
 IBGE News App
 Este é um aplicativo React que utiliza a API de notícias do IBGE para fornecer aos usuários as notícias mais recentes. O aplicativo permite que os usuários acessem as notícias, marquem suas favoritas e utilizem filtros para uma melhor experiência de navegação.
 
