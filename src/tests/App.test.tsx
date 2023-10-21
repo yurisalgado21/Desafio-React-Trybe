@@ -3,7 +3,8 @@ import { vi } from 'vitest';
 import App from '../App';
 import { renderWithRouter } from '../utils/renderWithRouter';
 import DataProvider from '../context/DataProvider';
-// import { mockData } from '../mock/mockData';
+import { mockData } from '../mock/mockData';
+// import * as APIModule from '../hooks/useApiIBGE';
 
 afterEach(() => {
   vi.restoreAllMocks();
@@ -58,20 +59,19 @@ describe('Teste da minha página Home', () => {
       fail('Body não encontrado');
     }
   });
+  it('Testar a função de API IBGE com um mock', async () => {
+    const MOCK_RESPONSE = {
+      ok: true,
+      status: 200,
+      json: async () => mockData,
+    } as Response;
+    const mockFetch = vi.spyOn(global, 'fetch').mockResolvedValue(MOCK_RESPONSE);
+    renderWithRouter(
+      <DataProvider>
+        <App />
+      </DataProvider>,
+    );
+    expect(mockFetch).toHaveBeenCalled();
+    expect(mockFetch).toHaveBeenCalledWith('https://servicodados.ibge.gov.br/api/v3/noticias/?qtd=100');
+  });
 });
-
-// const mockFetch = jest.fn(() => Promise.resolve({
-//   json: () => Promise.resolve(mockData),
-// }));
-
-// global.fetch = mockFetch;
-
-// describe('Teste da minha API mockada', () => {
-//   it('Deve renderizar os dados da API corretamente', async () => {
-//     renderWithRouter(
-//       <DataProvider>
-//         <App />
-//       </DataProvider>,
-//     );
-//   });
-// });
