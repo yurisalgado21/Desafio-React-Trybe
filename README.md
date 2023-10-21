@@ -18,4 +18,4 @@ Context API: Implementado para gerenciar o estado global e facilitar o compartil
 Hooks Personalizados: Criados para a chamada da API e para outras funcionalidades específicas.
 Testes: Desenvolvido um pequeno teste para verificar a funcionalidade de uma principais características, incluindo o mock da API, com uma cobertura mínima de 50%.
 Responsividade: Pude fazer em partes a responsividade para uma pequena  e melhor experiência de usuário consistente em dispositivos de diferentes tamanhos.
-Deploy: O aplicativo foi implantado e pode ser acessado em https://desafio-react-trybe-4acds400k.vercel.app/
+Deploy: O aplicativo foi implantado e pode ser acessado em https://desafio-react-trybe-nl58har9h.vercel.app/
